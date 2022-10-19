@@ -1,2 +1,1 @@
-./squad_df_validation.json
-./squad_df_train.json
+*.json
