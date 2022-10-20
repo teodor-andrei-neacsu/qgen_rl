@@ -80,11 +80,11 @@ def main():
     # for question generation: generate question: answer: context:
     # for question answering: answer question: context, question
 
-    train_ans = train_spans[1][1]
+    train_ans = train_spans[0][1]
 
     print("Train context: ", train_context)
     print("Train ans:     ", train_ans)
-
+ 
 
     # tokenize input for question generation 
     input_id_a = tokenizer("generate question: answer: " + train_ans + " context: " + train_context + " question: ", return_tensors="pt", max_length=128, padding='max_length', truncation=True)
